@@ -1,9 +1,8 @@
-//import 'dart:ui';
-
 import 'package:flutter/material.dart';
+import 'dart:ui';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -11,100 +10,292 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-          appBar: AppBar(),
-          body: ListView(
-            // parent listview
-            physics: BouncingScrollPhysics(), // this is for decoration
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  Color backgroundColor = Colors.white;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: backgroundColor,
+      appBar: AppBar(
+        title: const Text('my third lab'),
+      ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
             children: [
-              Container(
-                child: Image(
-                    image: NetworkImage(
-                        "https://th.bing.com/th/id/R.89ee28915ec60f85282cc057d363ef15?rik=MIaZ1cf%2fK8kYLg&pid=ImgRaw&r=0")),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  const Text('Option 1'),
+                  const SizedBox(
+                    width: 25,
+                  ),
+                  Row(
+                    children: [
+                      Image.network(
+                        'https://th.bing.com/th/id/OIP.ukR9HN80FRh8q6NjfGBM2QHaEm?pid=ImgDet&rs=1',
+                        width: 200.0,
+                      ),
+                      const SizedBox(
+                        width: 20,
+                      ),
+                      Column(
+                        children: const [
+                          Icon(
+                            Icons.tiktok,
+                            size: 35,
+                            color: Colors.black,
+                          ),
+                          Icon(
+                            Icons.snapchat,
+                            size: 35,
+                            color: Colors.yellow,
+                          ),
+                          Icon(
+                            Icons.check,
+                            size: 35,
+                            color: Colors.red,
+                          ),
+                          Icon(
+                            Icons.card_travel,
+                            size: 35,
+                            color: Colors.amber,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
               ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    Icon(Icons.shop),
-                    SizedBox(
-                      width: 150,
-                    ),
-                    Text(
-                      "Buy Now",
-                      style:
-                          TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-                    ),
-                  ],
-                ),
+              const Divider(
+                color: Colors.black,
+                height: 16.0,
               ),
-              // insider list view (the child one )
-              Container(
-                height: 400,
-                width: 900,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  // physics: NeverScrollableScrollPhysics(),
-                  shrinkWrap: true,
-                  children: [
-                    Container(
-                      child: Image(
-                          image: NetworkImage(
-                              "https://th.bing.com/th/id/R.3e0708db7cae1cdf64c2e9f7d9d95f55?rik=Q0e9KB%2fK6Ov0yg&pid=ImgRaw&r=0")),
-                    ),
-                    Container(
-                      child: Image(
-                          image: NetworkImage(
-                              "https://th.bing.com/th/id/R.1573992639cb9bc56a7bd4b7c9423f45?rik=gMta6wR5rt9DLw&pid=ImgRaw&r=0")),
-                    )
-                  ],
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  const Text('Option 2'),
+                  const SizedBox(
+                    width: 16.0,
+                  ),
+                  Row(
+                    children: [
+                      Column(
+                        children: const [
+                          Icon(
+                            Icons.tiktok,
+                            size: 35,
+                            color: Colors.black,
+                          ),
+                          Icon(
+                            Icons.snapchat,
+                            size: 35,
+                            color: Colors.yellow,
+                          ),
+                          Icon(
+                            Icons.check,
+                            size: 35,
+                            color: Colors.red,
+                          ),
+                          Icon(
+                            Icons.card_travel,
+                            size: 35,
+                            color: Colors.amber,
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        width: 16.0,
+                      ),
+                      Image.network(
+                        'https://th.bing.com/th/id/OIP.RTMdud17B74Rv0r-uJPo6AHaEo?pid=ImgDet&rs=1',
+                        width: 200.0,
+                      ),
+                    ],
+                  ),
+                ],
               ),
-              Container(
-                child: Image(
-                    image: NetworkImage(
-                        "https://1.bp.blogspot.com/-n3YUsCOh3WI/VVmjQm2RCwI/AAAAAAAACBY/oBqTcuLmF1o/s1600/337171-dell-inspiron-14r-5437%2B(1).jpg")),
+              const Divider(
+                color: Colors.black,
+                height: 16.0,
               ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    Icon(Icons.shop),
-                    SizedBox(
-                      width: 150,
-                    ),
-                    Text(
-                      "Buy Now",
-                      style:
-                          TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-                    ),
-                  ],
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  const Text('Option 3'),
+                  const SizedBox(
+                    width: 16.0,
+                  ),
+                  Column(
+                    children: [
+                      Row(
+                        children: const [
+                          Icon(
+                            Icons.tiktok,
+                            size: 35,
+                            color: Colors.black,
+                          ),
+                          Icon(
+                            Icons.snapchat,
+                            size: 35,
+                            color: Colors.yellow,
+                          ),
+                          Icon(
+                            Icons.check,
+                            size: 35,
+                            color: Colors.red,
+                          ),
+                          Icon(
+                            Icons.card_travel,
+                            size: 35,
+                            color: Colors.amber,
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 16.0,
+                      ),
+                      Image.network(
+                        'https://1.bp.blogspot.com/-MTMMJZPeJJ0/UdqoIqaIP-I/AAAAAAAAKWE/292VfvFTqXM/s1600/2013+cars+wallpaer+14.jpg',
+                        width: 200.0,
+                      ),
+                    ],
+                  ),
+                ],
               ),
-              Container(
-                child: Image(
-                    image: NetworkImage(
-                        "https://1.bp.blogspot.com/-n3YUsCOh3WI/VVmjQm2RCwI/AAAAAAAACBY/oBqTcuLmF1o/s1600/337171-dell-inspiron-14r-5437%2B(1).jpg")),
+              const Divider(
+                color: Colors.black,
+                height: 16.0,
               ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    Icon(Icons.shop),
-                    SizedBox(
-                      width: 150,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  const Text('Option 4'),
+                  const SizedBox(
+                    width: 16.0,
+                  ),
+                  Column(
+                    children: [
+                      Image.network(
+                        'https://th.bing.com/th/id/R.1fd566b4e8ad9df6e08f2af1c7474ee6?rik=dq3W7Ngfvy%2b8yA&pid=ImgRaw&r=0',
+                        width: 200.0,
+                      ),
+                      const SizedBox(
+                        height: 16.0,
+                      ),
+                      Row(
+                        children: const [
+                          Icon(
+                            Icons.tiktok,
+                            size: 35,
+                            color: Colors.black,
+                          ),
+                          Icon(
+                            Icons.snapchat,
+                            size: 35,
+                            color: Colors.yellow,
+                          ),
+                          Icon(
+                            Icons.check,
+                            size: 35,
+                            color: Colors.red,
+                          ),
+                          Icon(
+                            Icons.card_travel,
+                            size: 35,
+                            color: Colors.amber,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              const Divider(
+                color: Colors.black,
+                height: 16.0,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blue,
+                      maximumSize: const Size(50, 50),
+                      minimumSize: const Size(50, 50),
+                      shape: const CircleBorder(),
                     ),
-                    Text(
-                      "Buy Now",
-                      style:
-                          TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                    onPressed: () {
+                      setState(() {
+                        backgroundColor = Colors.blue;
+                      });
+                    },
+                    child: null,
+                  ),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.pink,
+                      maximumSize: const Size(50, 50),
+                      minimumSize: const Size(50, 50),
+                      shape: const CircleBorder(),
                     ),
-                  ],
-                ),
+                    onPressed: () {
+                      setState(() {
+                        backgroundColor = Colors.pink;
+                      });
+                    },
+                    child: null,
+                  ),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.orange,
+                      maximumSize: const Size(50, 50),
+                      minimumSize: const Size(50, 50),
+                      shape: const CircleBorder(),
+                    ),
+                    onPressed: () {
+                      setState(() {
+                        backgroundColor = Colors.orange;
+                      });
+                    },
+                    child: null,
+                  ),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.grey,
+                      maximumSize: const Size(50, 50),
+                      minimumSize: const Size(50, 50),
+                      shape: const CircleBorder(),
+                    ),
+                    onPressed: () {
+                      setState(() {
+                        backgroundColor = Colors.grey;
+                      });
+                    },
+                    child: null,
+                  ),
+                ],
               ),
             ],
-          )),
+          ),
+        ),
+      ),
     );
   }
 }
