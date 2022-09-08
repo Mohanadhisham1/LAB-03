@@ -53,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         width: 200.0,
                       ),
                       const SizedBox(
-                        width: 20,
+                        width: 15,
                       ),
                       Column(
                         children: const [
@@ -92,7 +92,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   const Text('Option 2'),
                   const SizedBox(
-                    width: 16.0,
+                    width: 25,
                   ),
                   Row(
                     children: [
@@ -121,7 +121,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ],
                       ),
                       const SizedBox(
-                        width: 16.0,
+                        width: 20,
                       ),
                       Image.network(
                         'https://th.bing.com/th/id/OIP.RTMdud17B74Rv0r-uJPo6AHaEo?pid=ImgDet&rs=1',
@@ -140,7 +140,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   const Text('Option 3'),
                   const SizedBox(
-                    width: 16.0,
+                    width: 25,
                   ),
                   Column(
                     children: [
@@ -169,7 +169,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ],
                       ),
                       const SizedBox(
-                        height: 16.0,
+                        height: 15,
                       ),
                       Image.network(
                         'https://1.bp.blogspot.com/-MTMMJZPeJJ0/UdqoIqaIP-I/AAAAAAAAKWE/292VfvFTqXM/s1600/2013+cars+wallpaer+14.jpg',
@@ -188,7 +188,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   const Text('Option 4'),
                   const SizedBox(
-                    width: 16.0,
+                    width: 25,
                   ),
                   Column(
                     children: [
@@ -197,7 +197,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         width: 200.0,
                       ),
                       const SizedBox(
-                        height: 16.0,
+                        height: 15,
                       ),
                       Row(
                         children: const [
